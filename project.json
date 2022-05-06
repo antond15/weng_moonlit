@@ -1,0 +1,31 @@
+{
+	"file": "index.html",
+	"general": {
+		"properties": {
+			"schemecolor": {
+				"order": 0,
+				"text": "ui_browse_properties_scheme_color",
+				"type": "color",
+				"value": "0 0 0"
+			},
+			"key": {
+				"index": 0,
+				"order": 100,
+				"text": "API Key",
+				"type": "textinput",
+				"value": ""
+			},
+			"location": {
+				"index": 1,
+				"order": 101,
+				"text": "Location",
+				"type": "textinput",
+				"value": "London"
+			}
+		}
+	},
+	"preview": "",
+	"title": "Moonlit",
+	"type": "web",
+	"version": 0
+}
