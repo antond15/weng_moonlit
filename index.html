@@ -1,0 +1,32 @@
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link rel='stylesheet' href='visuals/style.css'>
+	<script src='scripts/time.js' defer></script>
+	<script src='scripts/weather.js' defer></script>
+</head>
+<body>
+	<div class='container'>
+		<div class='weather-container'>
+			<img id='icon' src='https://openweathermap.org/img/wn/02d@2x.png'>
+			<div>
+				<span id='temperature'>27 °C</span>
+				<span id='description'>Polojasno</span>
+			</div>
+		</div>
+
+		<div class='blob-container'>
+			<div class='blob'></div>
+			<img src='visuals/letter.svg'>
+		</div>
+
+		<div class='time-container'>
+			<p id='time'><span id='hours'>00</span><span id='colon'>:</span><span id='minutes'>00</span></p>
+			<p id='day'>PONDĚLÍ</p>
+		</div>
+
+	</div>
+</body>
+</html>

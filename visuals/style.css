@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap");
+body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0f2027;
+  /* fallback for old browsers */
+  background: -webkit-gradient(linear, right top, left top, from(#2c5364), color-stop(#203a43), to(#0f2027));
+  background: linear-gradient(to left, #2c5364, #203a43, #0f2027);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .weather-container {
+  position: absolute;
+  top: 0;
+}
+
+.container .weather-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #eee;
+}
+
+.container .weather-container div #temperature {
+  font-size: 1.7em;
+}
+
+.container .weather-container div #description {
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.container .blob-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .blob-container .blob {
+  width: 25vh;
+  height: 25vh;
+  background: #ce2b29;
+  /* fallback for old browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from(#ce2b29), color-stop(#b92022), color-stop(#a3141a), to(#8e0913));
+  background: linear-gradient(to bottom, #ce2b29, #b92022, #a3141a, #8e0913);
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 50% 50% 30% 70% / 70% 70% 30% 30%;
+  -webkit-animation: move 40s ease-in-out infinite;
+          animation: move 40s ease-in-out infinite;
+}
+
+@-webkit-keyframes move {
+  20% {
+    -webkit-transform: scale(0.9) rotate(15deg);
+            transform: scale(0.9) rotate(15deg);
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+  }
+  40% {
+    -webkit-transform: scale(1) rotate(30deg);
+            transform: scale(1) rotate(30deg);
+    border-radius: 70% 30% 50% 50% / 60% 60% 40% 40%;
+  }
+  60% {
+    -webkit-transform: scale(0.9) rotate(45deg);
+            transform: scale(0.9) rotate(45deg);
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+  80% {
+    -webkit-transform: scale(1) rotate(15deg);
+            transform: scale(1) rotate(15deg);
+    border-radius: 50% 50% 30% 70% / 70% 70% 30% 30%;
+  }
+}
+
+@keyframes move {
+  20% {
+    -webkit-transform: scale(0.9) rotate(15deg);
+            transform: scale(0.9) rotate(15deg);
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+  }
+  40% {
+    -webkit-transform: scale(1) rotate(30deg);
+            transform: scale(1) rotate(30deg);
+    border-radius: 70% 30% 50% 50% / 60% 60% 40% 40%;
+  }
+  60% {
+    -webkit-transform: scale(0.9) rotate(45deg);
+            transform: scale(0.9) rotate(45deg);
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+  80% {
+    -webkit-transform: scale(1) rotate(15deg);
+            transform: scale(1) rotate(15deg);
+    border-radius: 50% 50% 30% 70% / 70% 70% 30% 30%;
+  }
+}
+
+.container .blob-container img {
+  position: absolute;
+  width: 25vh;
+}
+
+.container .time-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 5%;
+  color: #eee;
+}
+
+.container .time-container p {
+  margin: 0;
+}
+
+.container .time-container #time {
+  font-size: 1.6em;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.container .time-container #time #colon {
+  -webkit-animation: blink 2s step-end infinite;
+          animation: blink 2s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.container .time-container #time img {
+  width: 1.6em;
+}
+
+.container .time-container #day {
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
