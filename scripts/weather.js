@@ -1,4 +1,5 @@
-let API_KEY, API_URL;
+let API_URL;
+let settings = {};
 
 const weatherElements = {
 	icon: document.getElementById('icon'),
@@ -9,11 +10,15 @@ const weatherElements = {
 
 window.wallpaperPropertyListener = {
     applyUserProperties: function(properties) {
-		const unit = properties.units.value || 'metric';
-		weatherElements.unit.textContent = unit === 'metric' ? 'C' : 'F';
+		for (const [key, property] of Object.entries(properties)) {
+			if(key.startsWith('ac_')) {
+				settings[key.slice(3)] = property.value || property.default;
+			}
+		}
 
-		API_KEY = properties.key.value;
-		API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${properties.location.value || 'London'}&appid=${API_KEY}&units=${unit}&lang=${properties.language.value || 'en'}`;
+		weatherElements.unit.textContent = settings.units === 'metric' ? 'C' : 'F';
+		API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${settings.location}&appid=${settings.key}&units=${settings.units}&lang=${settings.language}`;
+
 		updateWeather();
     }
 };
@@ -27,7 +32,7 @@ const setWarning = () => {
 }
 
 const fetchData = async () => {
-	if(!API_KEY) {
+	if(!settings.key) {
 		setWarning();
 		return;
 	}
