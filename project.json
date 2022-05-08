@@ -28,6 +28,23 @@
 				"text": "Language",
 				"type": "textinput",
 				"value": "en"
+			},
+			"units": {
+				"index": 3,
+				"order" : 103,
+				"text" : "Unit system",
+				"type" : "combo",
+				"value" : "metric",
+				"options": [
+					{
+						"label" : "Metric (Celsius)",
+						"value" : "metric"
+					},
+					{
+						"label" : "Imperial (Fahrenheit)",
+						"value" : "imperial"
+					}
+				]
 			}
 		}
 	},

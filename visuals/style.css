@@ -56,6 +56,10 @@ body {
   color: #eee;
 }
 
+.container .weather-container div p {
+  margin: 0;
+}
+
 .container .weather-container div #temperature {
   font-size: 1.7em;
 }
