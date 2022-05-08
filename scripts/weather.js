@@ -1,4 +1,4 @@
-let settings = {};
+let API_KEY, API_URL;
 
 const weatherElements = {
 	icon: document.getElementById('icon'),
@@ -8,9 +8,8 @@ const weatherElements = {
 
 window.wallpaperPropertyListener = {
     applyUserProperties: function(properties) {
-		settings.key = properties.key.value;
-		settings.location = properties.location.value;
-		settings.language = properties.language.value;
+		API_KEY = properties.key.value;
+		API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${properties.location.value || 'London'}&appid=${API_KEY}&units=metric&lang=${properties.language.value || 'en'}`
 		updateWeather();
     }
 };
@@ -24,13 +23,12 @@ const setWarning = () => {
 }
 
 const fetchData = async () => {
-	if(!settings.key) {
+	if(!API_KEY) {
 		setWarning();
 		return;
 	}
 
-	const url = `https://api.openweathermap.org/data/2.5/weather?q=${settings.location || 'London'}&appid=${settings.key}&units=metric&lang=${settings.language || 'en'}`;
-	const response = await fetch(url);
+	const response = await fetch(API_URL);
 	const data = await response.json();
 	return data;
 }
