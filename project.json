@@ -21,6 +21,13 @@
 				"text": "Location",
 				"type": "textinput",
 				"value": "London"
+			},
+			"language": {
+				"index": 2,
+				"order": 102,
+				"text": "Language",
+				"type": "textinput",
+				"value": "en"
 			}
 		}
 	},

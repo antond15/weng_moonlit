@@ -10,6 +10,7 @@ window.wallpaperPropertyListener = {
     applyUserProperties: function(properties) {
 		settings.key = properties.key.value;
 		settings.location = properties.location.value;
+		settings.language = properties.language.value;
 		updateWeather();
     }
 };
@@ -28,11 +29,12 @@ const fetchData = async () => {
 		return;
 	}
 
-	const url = `https://api.openweathermap.org/data/2.5/weather?q=${settings.location || 'London'}&appid=${settings.key}&units=metric&lang=cz`;
+	const url = `https://api.openweathermap.org/data/2.5/weather?q=${settings.location || 'London'}&appid=${settings.key}&units=metric&lang=${settings.language || 'en'}`;
 	const response = await fetch(url);
 	const data = await response.json();
 	return data;
 }
+
 const updateWeather = () => {
 	fetchData().then(data => {
 		if(!data || data.cod === 401) {
