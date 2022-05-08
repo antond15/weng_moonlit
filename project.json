@@ -26,8 +26,56 @@
 				"index": 2,
 				"order": 102,
 				"text": "Language",
-				"type": "textinput",
-				"value": "en"
+				"type": "combo",
+				"value": "en",
+				"options": [
+					{ "label": "Afrikaans", "value": "af" },
+					{ "label": "Albanian", "value": "al" },
+					{ "label": "Arabic", "value": "ar" },
+					{ "label": "Azerbaijani", "value": "az" },
+					{ "label": "Bulgarian", "value": "bg" },
+					{ "label": "Catalan", "value": "ca" },
+					{ "label": "Czech", "value": "cz" },
+					{ "label": "Danish", "value": "da" },
+					{ "label": "German", "value": "de" },
+					{ "label": "Greek", "value": "el" },
+					{ "label": "English", "value": "en" },
+					{ "label": "Basque", "value": "eu" },
+					{ "label": "Persian", "value": "fa" },
+					{ "label": "Finnish", "value": "fi" },
+					{ "label": "French", "value": "fr" },
+					{ "label": "Galician", "value": "gl" },
+					{ "label": "Hebrew", "value": "he" },
+					{ "label": "Hindi", "value": "hi" },
+					{ "label": "Croatian", "value": "hr" },
+					{ "label": "Hungarian", "value": "hu" },
+					{ "label": "Indonesian", "value": "id" },
+					{ "label": "Italian", "value": "it" },
+					{ "label": "Japanese", "value": "ja" },
+					{ "label": "Korean", "value": "kr" },
+					{ "label": "Latvian", "value": "la" },
+					{ "label": "Lithuanian", "value": "lt" },
+					{ "label": "Macedonian", "value": "mk" },
+					{ "label": "Norwegian", "value": "no" },
+					{ "label": "Dutch", "value": "nl" },
+					{ "label": "Polish", "value": "pl" },
+					{ "label": "Portuguese", "value": "pt" },
+					{ "label": "Português Brasil", "value": "pt_br" },
+					{ "label": "Romanian", "value": "ro" },
+					{ "label": "Russian", "value": "ru" },
+					{ "label": "Swedish", "value": "sv" },
+					{ "label": "Slovak", "value": "sk" },
+					{ "label": "Slovenian", "value": "sl" },
+					{ "label": "Spanish", "value": "es" },
+					{ "label": "Serbian", "value": "sr" },
+					{ "label": "Thai", "value": "th" },
+					{ "label": "Turkish", "value": "tr" },
+					{ "label": "Ukrainian", "value": "ua" },
+					{ "label": "Vietnamese", "value": "vi" },
+					{ "label": "Chinese Simplified", "value": "zh_cn" },
+					{ "label": "Chinese Traditional", "value": "zh_tw" },
+					{ "label": "Zulu", "value": "zu" }
+				]
 			},
 			"units": {
 				"index": 3,
@@ -36,14 +84,8 @@
 				"type" : "combo",
 				"value" : "metric",
 				"options": [
-					{
-						"label" : "Metric (Celsius)",
-						"value" : "metric"
-					},
-					{
-						"label" : "Imperial (Fahrenheit)",
-						"value" : "imperial"
-					}
+					{ "label" : "Metric (Celsius)", "value" : "metric" },
+					{ "label" : "Imperial (Fahrenheit)", "value" : "imperial" }
 				]
 			}
 		}
